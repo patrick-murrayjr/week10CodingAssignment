@@ -5,6 +5,148 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Week 10 Programming Assignment</title>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css" />
   </head>
-  <body></body>
+  <body class="bg-secondary-subtle text-bg-light">
+    <div class="container-md mt-5">
+      <div class="row">
+        <div class="col">
+          <div
+            class="card border border-dark-subtle shadow"
+            style="width 20rem">
+            <div class="card-body">
+              <h5 class="card-title">Issue Tracker</h5>
+              <form>
+                <!-- FIRST / LAST NAME -->
+                <div class="row mb-3">
+                  <div class="col-6">
+                    <label for="reported-by-first-name" class="form-label"
+                      >First Name:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="reported-by-first-name" />
+                  </div>
+                  <div class="col-6">
+                    <label for="reported-by-last-name" class="form-label"
+                      >Last Name:</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="reported-by-last-name" />
+                  </div>
+                </div>
+                <!-- PHONE / EMAIL -->
+                <div class="row mb-3">
+                  <div class="col-6">
+                    <label for="reported-by-phone" class="form-label"
+                      >Phone Number:</label
+                    >
+                    <input
+                      type="Phone"
+                      class="form-control"
+                      id="reported-by-phone" />
+                  </div>
+                  <div class="col-6">
+                    <label for="reported-by-email" class="form-label"
+                      >Email:</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="reported-by-phone" />
+                  </div>
+                </div>
+                <!-- DESCRIPTION / DUE DATE -->
+                <div class="row mb-3">
+                  <div class="col-8">
+                    <div class="mb-3">
+                      <label for="issue-description" class="form-label"
+                        >Issue Description:</label
+                      >
+                      <textarea
+                        type="text"
+                        class="form-control"
+                        id="issue-description"
+                        rows="4"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <label for="due-date" class="form-label">Due Date:</label>
+                    <input type="date" class="form-control" id="due-date" />
+                  </div>
+                </div>
+                <!-- TYPE / ENVIRONMENT / SEVERITY -->
+                <div class="row mb-3 mx-0 d-flex justify-content-between">
+                  <div class="col-3">
+                    <div class="dropdown">
+                      <button
+                        class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown">
+                        Issue Type
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Bug</a></li>
+                        <li><a class="dropdown-item" href="#">Feature</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="dropdown">
+                      <button
+                        class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown">
+                        Environment
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="#">Development</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#">Production</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="dropdown">
+                      <button
+                        class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown">
+                        Severity
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Low</a></li>
+                        <li><a class="dropdown-item" href="#">Medium</a></li>
+                        <li><a class="dropdown-item" href="#">High</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- SUBMIT BUTTON -->
+                <div class="row mt-4 mx-2">
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    id="submit-button">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
