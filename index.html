@@ -10,128 +10,114 @@
       href="./node_modules/bootstrap/dist/css/bootstrap.css" />
   </head>
   <body class="bg-secondary-subtle text-bg-light">
-    <div class="container-md mt-5">
+    <div class="container-fluid container-lg">
       <div class="row">
         <div class="col">
           <div
             class="card border border-dark-subtle shadow"
             style="width 20rem">
-            <div class="card-body">
-              <h5 class="card-title">Issue Tracker</h5>
-              <form>
+            <div class="card-body p-3">
+              <h4 class="card-title">Help Desk Issue Tracker</h4>
+              <form autocomplete="false">
                 <!-- FIRST / LAST NAME -->
                 <div class="row mb-3">
                   <div class="col-6">
-                    <label for="reported-by-first-name" class="form-label"
+                    <label for="first-name" class="form-label"
                       >First Name:</label
                     >
                     <input
                       type="text"
                       class="form-control"
-                      id="reported-by-first-name" />
+                      id="first-name"
+                      placeholder="Reported by"
+                      required />
                   </div>
                   <div class="col-6">
-                    <label for="reported-by-last-name" class="form-label"
-                      >Last Name:</label
-                    >
+                    <label for="last-name" class="form-label">Last Name:</label>
                     <input
                       type="text"
                       class="form-control"
-                      id="reported-by-last-name" />
+                      id="last-name"
+                      placeholder="Reported by"
+                      required />
                   </div>
                 </div>
                 <!-- PHONE / EMAIL -->
                 <div class="row mb-3">
                   <div class="col-6">
-                    <label for="reported-by-phone" class="form-label"
-                      >Phone Number:</label
-                    >
+                    <label for="phone" class="form-label">Phone Number:</label>
                     <input
-                      type="Phone"
+                      type="phone"
                       class="form-control"
-                      id="reported-by-phone" />
+                      id="phone"
+                      placeholder="1(234)567-1234" />
                   </div>
                   <div class="col-6">
-                    <label for="reported-by-email" class="form-label"
-                      >Email:</label
-                    >
+                    <label for="email" class="form-label">Email:</label>
                     <input
                       type="email"
                       class="form-control"
-                      id="reported-by-phone" />
+                      id="email"
+                      placeholder="someone@somewhere.com"
+                      required />
                   </div>
                 </div>
-                <!-- DESCRIPTION / DUE DATE -->
+                <!-- DESCRIPTION / DATE REPORTED -->
                 <div class="row mb-3">
                   <div class="col-8">
                     <div class="mb-3">
-                      <label for="issue-description" class="form-label"
+                      <label for="description" class="form-label"
                         >Issue Description:</label
                       >
                       <textarea
                         type="text"
                         class="form-control"
-                        id="issue-description"
-                        rows="4"></textarea>
+                        id="description"
+                        rows="4"
+                        columns="40"
+                        placeholder="Description of issue"
+                        required></textarea>
                     </div>
                   </div>
                   <div class="col-4">
-                    <label for="due-date" class="form-label">Due Date:</label>
-                    <input type="date" class="form-control" id="due-date" />
+                    <label for="reported-date" class="form-label"
+                      >Date Reported:</label
+                    >
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="reported-date"
+                      required />
                   </div>
                 </div>
                 <!-- TYPE / ENVIRONMENT / SEVERITY -->
-                <div class="row mb-3 mx-0 d-flex justify-content-between">
-                  <div class="col-3">
-                    <div class="dropdown">
-                      <button
-                        class="btn btn-primary dropdown-toggle"
-                        type="button"
-                        data-bs-toggle="dropdown">
-                        Issue Type
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Bug</a></li>
-                        <li><a class="dropdown-item" href="#">Feature</a></li>
-                      </ul>
-                    </div>
+                <div class="row mb-3">
+                  <div class="col-4">
+                    <select class="form-select" id="type">
+                      <option>Issue Type:</option>
+                      <option selected value="Bug">Bug</option>
+                      <option value="Feature">Feature</option>
+                      <option value="Support">Support</option>
+                    </select>
                   </div>
-                  <div class="col-3">
-                    <div class="dropdown">
-                      <button
-                        class="btn btn-primary dropdown-toggle"
-                        type="button"
-                        data-bs-toggle="dropdown">
-                        Environment
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li>
-                          <a class="dropdown-item" href="#">Development</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#">Production</a>
-                        </li>
-                      </ul>
-                    </div>
+                  <div class="col-4">
+                    <select class="form-select" id="environment">
+                      <option>Environment:</option>
+                      <option selected value="Development">Development</option>
+                      <option value="Production">Production</option>
+                    </select>
                   </div>
-                  <div class="col-3">
-                    <div class="dropdown">
-                      <button
-                        class="btn btn-primary dropdown-toggle"
-                        type="button"
-                        data-bs-toggle="dropdown">
-                        Severity
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Low</a></li>
-                        <li><a class="dropdown-item" href="#">Medium</a></li>
-                        <li><a class="dropdown-item" href="#">High</a></li>
-                      </ul>
-                    </div>
+                  <div class="col-4">
+                    <select class="form-select" id="severity">
+                      <option>Severity:</option>
+                      <option selected value="Low">Low</option>
+                      <option value="Medium">Medium</option>
+                      <option value="High">High</option>
+                    </select>
                   </div>
                 </div>
                 <!-- SUBMIT BUTTON -->
-                <div class="row mt-4 mx-2">
+                <div class="row mt-4 mx-0">
                   <button
                     type="submit"
                     class="btn btn-primary"
@@ -140,8 +126,30 @@
                   </button>
                 </div>
               </form>
+              <div
+                class="row my-2 bg-secondary-subtle"
+                style="height: 0.125rem"></div>
+              <div class="row">
+                <table id="list" class="table table-striped">
+                  <tr>
+                    <th>ID</th>
+                    <th>Description</th>
+                    <th>Reported By</th>
+                    <th>Date Reported</th>
+                    <th>Date Closed</th>
+                    <th>Status</th>
+                    <th>Days Open</th>
+                    <th>Action</th>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div style="height: 4rem"></div>
         </div>
       </div>
     </div>
