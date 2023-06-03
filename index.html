@@ -8,6 +8,7 @@
     <link
       rel="stylesheet"
       href="./node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body class="bg-secondary-subtle text-bg-light">
     <div class="container-fluid container-lg">
@@ -94,23 +95,23 @@
                 <div class="row mb-3">
                   <div class="col-4">
                     <select class="form-select" id="type">
-                      <option>Issue Type:</option>
-                      <option selected value="Bug">Bug</option>
+                      <option selected>Issue Type:</option>
+                      <option value="Bug">Bug</option>
                       <option value="Feature">Feature</option>
                       <option value="Support">Support</option>
                     </select>
                   </div>
                   <div class="col-4">
                     <select class="form-select" id="environment">
-                      <option>Environment:</option>
-                      <option selected value="Development">Development</option>
+                      <option selected>Environment:</option>
+                      <option value="Development">Development</option>
                       <option value="Production">Production</option>
                     </select>
                   </div>
                   <div class="col-4">
                     <select class="form-select" id="severity">
-                      <option>Severity:</option>
-                      <option selected value="Low">Low</option>
+                      <option selected>Severity:</option>
+                      <option value="Low">Low</option>
                       <option value="Medium">Medium</option>
                       <option value="High">High</option>
                     </select>
@@ -132,14 +133,14 @@
               <div class="row">
                 <table id="list" class="table table-striped">
                   <tr>
-                    <th>ID</th>
-                    <th>Description</th>
-                    <th>Reported By</th>
-                    <th>Date Reported</th>
-                    <th>Date Closed</th>
-                    <th>Status</th>
-                    <th>Days Open</th>
-                    <th>Action</th>
+                    <th class="bg-opacity-75 text-bg-dark">Issue ID</th>
+                    <th class="bg-opacity-75 text-bg-dark">Description</th>
+                    <th class="bg-opacity-75 text-bg-dark">Reported By</th>
+                    <th class="bg-opacity-75 text-bg-dark">Date Reported</th>
+                    <th class="bg-opacity-75 text-bg-dark">Date Closed</th>
+                    <th class="bg-opacity-75 text-bg-dark">Status</th>
+                    <th class="bg-opacity-75 text-bg-dark">Num Days Open</th>
+                    <th class="bg-opacity-75 text-bg-dark">Action</th>
                   </tr>
                 </table>
               </div>
