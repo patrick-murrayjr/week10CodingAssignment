@@ -314,5 +314,3 @@ class UI {
 
 //populate table when page first loads
 document.addEventListener('DOMContentLoaded', UI.drawTable);
-
-// DataStorage.removeData(1);
