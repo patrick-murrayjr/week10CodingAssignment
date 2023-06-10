@@ -30,9 +30,6 @@ class Issue {
     this.dateClosed = dateClosed;
     this.status = 'Open';
   }
-  getDescription() {
-    console.log(this.description);
-  }
 }
 //#endregion Issue Class
 
@@ -288,7 +285,10 @@ class UI {
   }
 
   static numberOfOpenDays(issues, i) {
+    // number of ms in 24 hours
     const msToDays = 86400000;
+
+    //check to see if the date closed has been provided, if not then use today's date for the calculation
     if (issues[i].dateClosed === '') {
       let today = new Date();
       today = `${today.getFullYear()}-${
